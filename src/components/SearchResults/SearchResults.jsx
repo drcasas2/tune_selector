@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 // import SearchBar from '../SearchBar/SearchBar';
-
+import Tracklist from '../Tracklist/Tracklist';
 function SearchResults(props) {
 
     // const songs = [
@@ -21,11 +21,15 @@ function SearchResults(props) {
     //         song.match(searchInput));
     //     });
     // }
+    console.log(props.searchResults)
     return (
         <div>
-            <ul>
-            {props.searchResults.map((searchResult) => <li key={searchResult.id} className="flex my-5"><figure><img src={searchResult.image} width='100' height='100'/></ figure><p className='text-2xl text-gray-300'>{`${searchResult.artist} - ${searchResult.name}`}</p><p className='text-gray-500'>Album: {searchResult.album}</p></li>)}
-            </ul>
+            <h2> Search Results</h2>
+            <Tracklist 
+                tracks={props.searchResults}
+                onClick={props.onAdd}
+                inPlaylist={false}
+            />
         </div>
     );
 };

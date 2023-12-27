@@ -20,7 +20,6 @@ function SearchBar(props) {
     return (
         <>
             <div className="input-wrapper">
-                <FaSearch id="search-icon" onClick={search} />
                 <input
                 type="text"
                 placeholder="Search here"
@@ -28,8 +27,9 @@ function SearchBar(props) {
                 onKeyUp = {event => {
                     if(event.key === "Enter"){
                         search();}}} />
+                <button className= 'bg-white' onClick = {() => {setClick(true);
+                    search()}}> <FaSearch className='bg-white' id="search-icon" /></button>
             </div>
-            <button onClick = {() => setClick(true)}>Search</button>
         </>  
     );
 };

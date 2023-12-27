@@ -1,5 +1,4 @@
-/* .appContainer {
-  background-color: #eee;
+.appContainer {
   height: 100vh;
   width: 100vw;
 }
@@ -28,12 +27,25 @@
   box-shadow: 0px 0px 4px #ddd;
 }
 
-.search-bar-container {
+.searchBarContainer {
   padding-top: 20vh;
-  width: 40%;
+  width: 100%;
   margin: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   min-width: 200px;
+}
+
+/* .appHeader {
+  width: 100%;
+  background-color: #172554;
+  backdrop-filter: blur(0.25vw);
+  -webkit-backdrop-filter: blur(0.25vw);
+  border-radius: 0.7vw;
+  padding: 2.5vw 1.43vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 } */
