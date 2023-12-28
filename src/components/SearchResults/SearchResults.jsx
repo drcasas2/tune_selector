@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 // import SearchBar from '../SearchBar/SearchBar';
 import Tracklist from '../Tracklist/Tracklist';
+
 function SearchResults(props) {
 
     // const songs = [

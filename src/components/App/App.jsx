@@ -20,7 +20,7 @@ function App() {
     const [playlistName, setPlaylistName] = useState('');
     const [playlistDescription, setPlaylistDescription] = useState('');
     const [logged, setLogged] = useState(false);
-    const [userName, setUserName] = useState('');
+    const [userName, setUserName] = useState('');    
 
     useEffect(() => {
         const authenticated = Spotify.checkAuth();
@@ -54,9 +54,11 @@ function App() {
 
     const addTrack = (track) => {
         if (playlistTracks.some((addedTrack) => addedTrack.id === track.id)) {
+            console.log("if statement triggered on addTrack Function")
             return;
         } else {
-            setPlaylistTracks((prev) => [...prev, track]);
+            setPlaylistTracks((prev) => [...prev, track]); // Functional Update - The function will receive the previous value, and return an updated value.
+            console.log("else statement triggered on addTrack Function")
         }
     }
 
