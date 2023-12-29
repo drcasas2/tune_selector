@@ -54,11 +54,11 @@ function App() {
 
     const addTrack = (track) => {
         if (playlistTracks.some((addedTrack) => addedTrack.id === track.id)) {
-            console.log("if statement triggered on addTrack Function")
+            console.log("if statement was triggered on addTrack Function")
             return;
         } else {
             setPlaylistTracks((prev) => [...prev, track]); // Functional Update - The function will receive the previous value, and return an updated value.
-            console.log("else statement triggered on addTrack Function")
+            console.log("else statement was triggered on addTrack Function")
         }
     }
 
