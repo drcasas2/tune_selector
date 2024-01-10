@@ -22,11 +22,11 @@ function SearchResults(props) {
     //         song.match(searchInput));
     //     });
     // }
-    console.log(props.searchResults)
     return (
         <div>
             <h2> Search Results</h2>
             <Tracklist 
+                trackBtnAction='Add to playlist'
                 tracks={props.searchResults}
                 onClick={props.onAdd}
                 inPlaylist={false}

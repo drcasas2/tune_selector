@@ -184,7 +184,7 @@ function App() {
                     <SearchBar className="py-1" onSearch={search} />
                     <SearchResults searchResults={searchResults} onAdd={addTrack} />
                 </section>
-                <aside className={styles.playlistContainer}>
+                {/* <aside className={styles.playlistContainer}> */}
                     <Playlist
                         playlistName={playlistName}
                         playlistTracks={playlistTracks}
@@ -193,7 +193,7 @@ function App() {
                         onChangePlaylistDescription={changePlaylistDescription}
                         onSave={savePlaylist}
                     />
-                </aside>
+                {/* </aside> */}
             </main>
         );
 }

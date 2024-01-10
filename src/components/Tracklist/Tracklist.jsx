@@ -10,6 +10,7 @@ function Tracklist(props) {
                     return(
                         <Track 
                             className="my-4"
+                            trackBtnAction={props.trackBtnAction}
                             track={track}
                             key={track.id}
                             onClick={props.onClick}
