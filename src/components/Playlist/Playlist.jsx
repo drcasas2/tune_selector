@@ -15,12 +15,12 @@ function Playlist(props) {
             <div>
                 {props.playlistTracks.map(track => (
                     <p className='m-1 flex bg-blue-900 my-4 rounded-lg' key={track.id}>
-                        <button onClick={props.onRemove}><img src={track.image} alt={track.artist} width='auto' height='auto'/>{props.trackBtnAction}
+                        <button onClick={props.onRemove}><img src={track.image} alt={track.artist} width='auto' height='auto'/>{props.trackBtnAction}Remove from playlist</button>
                         <div className = 'block ml-3 my-auto'>
                             <h3>{track.name}</h3>
                             <p>{track.artist} | {track.album}</p>
                         </ div>
-                        </button>
+                        
 
                         {/* <button onClick={props.onRemove}><img src={track.image} alt={track.artist} width='auto' height='auto'/>{props.trackBtnAction}</button>
                         <div className = 'block ml-3 my-auto'>

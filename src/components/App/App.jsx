@@ -63,6 +63,7 @@ function App() {
     }
 
     const removeTrack = (track) => {
+        console.log("removeTrack function is called")
         setPlaylistTracks((prevTracks) =>
             prevTracks.filter(thisTrack => thisTrack.id !== track.id)
         );
