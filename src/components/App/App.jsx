@@ -65,7 +65,7 @@ function App() {
     const removeTrack = (track) => {
         console.log("removeTrack function is called")
         setPlaylistTracks((prevTracks) =>
-            prevTracks.filter(thisTrack => thisTrack.id !== track.id)
+            prevTracks.filter((thisTrack) => thisTrack.id !== track.id)
         );
     };
 
@@ -81,7 +81,7 @@ function App() {
         if (playlistTracks.length === 0) {
             return;
         }
-        const playlistUris = playlistTracks.map(track => track.uri);
+        const playlistUris = playlistTracks.map((track) => track.uri);
         Spotify.createPlaylist(playlistName, playlistDescription, playlistUris)
             .then((res) => {
                 if(res) {

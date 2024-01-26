@@ -15,7 +15,8 @@ function Playlist(props) {
             <div>
                 {props.playlistTracks.map(track => (
                     <p className='m-1 flex bg-blue-900 my-4 rounded-lg' key={track.id}>
-                        <button onClick={props.onRemove}><img src={track.image} alt={track.artist} width='auto' height='auto'/>{props.trackBtnAction}Remove from playlist</button>
+                        <button onClick={() => props.onRemove(track)}><img src={track.image} alt={track.artist} width='auto' height='auto'/> {props.trackBtnAction}Remove from playlist</button>
+
                         <div className = 'block ml-3 my-auto'>
                             <h3>{track.name}</h3>
                             <p>{track.artist} | {track.album}</p>
@@ -30,7 +31,7 @@ function Playlist(props) {
                     {/* <button onClick={trackAction}>{props.trackBtnAction}</button> */}
                     </ p>
                 ))}
-                <button onClick={props.onSave}>Save Playlist To Spotify</button>
+                <button onClick={() => props.onSave}>Save Playlist To Spotify</button>
             </div>
         </>
     );
