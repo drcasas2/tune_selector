@@ -145,7 +145,7 @@ function App() {
                 <p className="mt-1 text-center text-sm text-gray-500">
                 Thanks for trying the app! {' '}
                 <p>Made by David Casas</p>
-                <a href="https://drcasas2.github.io" className="drop-shadow-sm font-semibold leading-6 text-slate-500 hover:text-white  hover:brightness-{200} hover:drop-shadow-xl">
+                <a href="https://drcasas2.github.io" target="_blank" rel="noopener noreferrer" className="drop-shadow-sm font-semibold leading-6 text-slate-500 hover:text-white  hover:brightness-{200} hover:drop-shadow-xl">
                 Contact Me
                 </a>
                 </p>
