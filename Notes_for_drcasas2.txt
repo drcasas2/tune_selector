@@ -1,0 +1,1 @@
+Whenever you want to push an updated site to Github, run "npm run deploy" on your terminal within your tune_selector file
