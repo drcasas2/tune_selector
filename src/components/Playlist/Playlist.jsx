@@ -6,11 +6,11 @@ function Playlist(props) {
             <h1>Playlist Here</h1>
                 <input type="text" 
                 placeholder="Playlist Name..."
-                onChange={props.onChangeName}
+                onChange={(event) => props.onChangeName(event.target.value)} //I needed to get the value inside of the onChangeName object in order to resolve the circular JSON error found in the Spotify utility file. It was sending an object instead of a string for the name and description of the playlist
                 ></ input>
                 <input type="text"
                 placeholder="Playlist Description..."
-                onChange={props.onChangePlaylistDescription}
+                onChange={(event) => props.onChangePlaylistDescription(event.target.value)}
                 ></input>
             <div>
                 {props.playlistTracks.map(track => (
@@ -31,7 +31,7 @@ function Playlist(props) {
                     {/* <button onClick={trackAction}>{props.trackBtnAction}</button> */}
                     </ p>
                 ))}
-                <button onClick={() => props.onSave}>Save Playlist To Spotify</button>
+                <button onClick={() => props.onSave()}>Save Playlist To Spotify</button>
             </div>
         </>
     );

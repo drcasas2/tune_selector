@@ -186,6 +186,7 @@ function App() {
                     <SearchResults searchResults={searchResults} onAdd={addTrack} />
                 </section>
                 {/* <aside className={styles.playlistContainer}> */}
+                
                     <Playlist
                         playlistName={playlistName}
                         playlistTracks={playlistTracks}

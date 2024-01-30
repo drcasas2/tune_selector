@@ -61,6 +61,8 @@ const Spotify = {
             //authenticated[1] gives the values inside of the
             //capturing group (), so it will only give the access token and nothing around it.
             accessToken = authenticated[1];
+            console.log(`Authenticated variable is ${authenticated}`);
+            console.log(`accessToken variable is ${accessToken}`);
             return true;
         } else {
             return false;
@@ -129,11 +131,13 @@ const Spotify = {
 
     // User needs to input a playlist name, a playlist description, and 
     createPlaylist(playlistName, playlistDescription = '', urisArray) {
+        //console.log(`Spotify Utils Create Playlist method was accessed. Authenticated variable is ${authenticated}`);
+        console.log(`Spotify Utils Create Playlist method was accessed. playlistName variable is ${playlistName}`);
         const createPlaylistURL = `https://api.spotify.com/v1/users/${userId}/playlists`;
         const playlistData = {
             'name': playlistName,
-            'description': playlistDescription
-        }
+            'description': playlistDescription,
+        };
         return fetch(createPlaylistURL, {
             method: 'POST',
             headers: {
@@ -166,7 +170,7 @@ const Spotify = {
             return fetch(addTracksURL, {
                 method: 'POST',
                 headers: {
-                    'Authorization': `Bearere ${accessToken}`,
+                    'Authorization': `Bearer ${accessToken}`,
                     'Content-Type': 'application/json',
                 },
                 body: JSON.stringify(tracksToAdd),
