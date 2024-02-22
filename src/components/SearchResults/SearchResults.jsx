@@ -3,7 +3,6 @@ import React, { useState, useEffect } from 'react';
 import Tracklist from '../Tracklist/Tracklist';
 
 function SearchResults(props) {
-
     // const songs = [
     //     { artist: "One", name: "One Love", album: "1", id: "111"},
     //     { artist: "Two", name: "Twoo Love", album: "2", id: "222"},
@@ -22,17 +21,17 @@ function SearchResults(props) {
     //         song.match(searchInput));
     //     });
     // }
-    return (
-        <div>
-            <h2> Search Results</h2>
-            <Tracklist 
-                trackBtnAction='Add to playlist'
-                tracks={props.searchResults}
-                onClick={props.onAdd}
-                inPlaylist={false}
-            />
-        </div>
-    );
+
+        return (
+            <div>
+                <Tracklist 
+                    trackBtnAction='Add to playlist'
+                    tracks={props.searchResults}
+                    onClick={props.onAdd}
+                    inPlaylist={false}
+                />
+            </div>
+        );
 };
 
 export default SearchResults;

@@ -3,15 +3,14 @@ import React, { useState, useEffect } from 'react';
 function Playlist(props) {
     return (
         <>
-            <h1>Playlist Here</h1>
-                <input type="text" 
-                placeholder="Playlist Name..."
-                onChange={(event) => props.onChangeName(event.target.value)} //I needed to get the value inside of the onChangeName object in order to resolve the circular JSON error found in the Spotify utility file. It was sending an object instead of a string for the name and description of the playlist
-                ></ input>
-                <input type="text"
-                placeholder="Playlist Description..."
-                onChange={(event) => props.onChangePlaylistDescription(event.target.value)}
-                ></input>
+            <input type="text" 
+            placeholder="Playlist Name..."
+            onChange={(event) => props.onChangeName(event.target.value)} //I needed to get the value inside of the onChangeName object in order to resolve the circular JSON error found in the Spotify utility file. It was sending an object instead of a string for the name and description of the playlist
+            ></ input>
+            <input type="text"
+            placeholder="Playlist Description..."
+            onChange={(event) => props.onChangePlaylistDescription(event.target.value)}
+            ></input>
             <div>
                 {props.playlistTracks.map(track => (
                     <p className='m-1 flex bg-blue-900 my-4 rounded-lg' key={track.id}>

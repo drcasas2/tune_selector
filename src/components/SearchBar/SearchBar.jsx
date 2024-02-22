@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import {FaSearch} from "react-icons/fa";
-import "./SearchBar.css"
+import styles from './SearchBar.module.css';
 
 function SearchBar(props) {
     const [searchInput, setSearchInput] = useState("");
@@ -19,7 +19,7 @@ function SearchBar(props) {
 
     return (
         <>
-            <div className="input-wrapper">
+            <div className={styles.inputwrapper}>
                 <input
                 type="text"
                 placeholder="Search here"

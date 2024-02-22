@@ -9,7 +9,7 @@ function Tracklist(props) {
                 {props.tracks.map((track) => {
                     return(
                         <Track 
-                            className="my-4"
+                            className="my-4 w-full"
                             trackBtnAction={props.trackBtnAction}
                             track={track}
                             key={track.id}
