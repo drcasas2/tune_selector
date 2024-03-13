@@ -1,29 +1,45 @@
 .imageStyle {
-    padding: 5%;
+    /* padding: 1vh 0 1vh 0; */
     height: 100%;
     width: auto;
     object-fit: cover;
     margin: 0 auto;
+    border-radius: 20%;
+}
+
+.imageContainer {
+    justify-content: center;
+    text-align: center;
+    height: 12vh;
+    width: 20vh;
+    padding: 0 15% 5% 0;
+    margin: auto;
 }
 
 .button {
-    width: auto;
-    height: 100%;
-    padding: 0 0 5% 0;
-}
-
-.trackItems {
-    display: flex;
-    position: relative;
-    background-color: #1E40AF;
-    margin: 0 auto 1rem auto; /* Adjust margins as needed */
-    border-radius: 0.5rem;
-    text-align: center;
-    flex: 1; /* Allow the element to grow and shrink */
+    width: 18vh;
+    height: 15vh;
+    padding: 2% 0 8% 0;
 }
 
 .trackContainer {
     display: flex;
-    height: 20vh;
-    margin: 1rem auto;
+    height: 15vh;
+    width: 100%;
+    position:relative;
+    background-color: #1E40AF;
+    margin: 1rem auto 1rem auto; /* Adjust margins as needed */
+    border-radius: 0.5rem;
+    text-align: center;
+    flex: 1; /* Allow the element to grow and shrink */
+    align-items: stretch;
+    justify-content: center;
+}
+
+.trackInfo {
+    width: 100%;
+    align-items: stretch;
+    margin: auto;
+    display: block;
+    padding: 1vh;
 }

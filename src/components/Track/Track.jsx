@@ -8,14 +8,18 @@ function Track(props) {
     return (
         <>
             <div className={styles.trackContainer}>
-                <p className={styles.trackItems}>
-                        <button className={styles.button} onClick={trackAction}><img className= {styles.imageStyle} src={props.track.image} alt={props.track.artist} />{props.trackBtnAction}</button>
-                        <div className = 'block mx-auto my-auto'>
-                            <h3>{props.track.name}</h3>
-                            <p>{props.track.artist} | {props.track.album}</p>
-                        </div>
-                    {/* <button onClick={trackAction}>{props.trackBtnAction}</button> */}
-                </p>
+                <button className={styles.button} onClick={trackAction}>
+                    <div className={styles.imageContainer}>
+                        <img className= {styles.imageStyle} src={props.track.image} alt={props.track.artist} />
+                        {props.trackBtnAction}
+                    </div>
+                
+                </button>
+                <div className = {styles.trackInfo}>
+                    <h3>{props.track.name}</h3>
+                    <p>{props.track.artist} | {props.track.album}</p>
+                </div>
+                {/* <button onClick={trackAction}>{props.trackBtnAction}</button> */}
             </div>
         </>
     );
