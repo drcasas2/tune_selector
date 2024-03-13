@@ -7,9 +7,9 @@ function Track(props) {
     // console.log(props.track.name)
     return (
         <>
-            <div className='justify-center'>
+            <div className={styles.trackContainer}>
                 <p className={styles.trackItems}>
-                        <button className={styles.button} onClick={trackAction}><img className= {styles.imageStyle} src={props.track.image} alt={props.track.artist} width='auto' height='auto'/>{props.trackBtnAction}</button>
+                        <button className={styles.button} onClick={trackAction}><img className= {styles.imageStyle} src={props.track.image} alt={props.track.artist} />{props.trackBtnAction}</button>
                         <div className = 'block mx-auto my-auto'>
                             <h3>{props.track.name}</h3>
                             <p>{props.track.artist} | {props.track.album}</p>

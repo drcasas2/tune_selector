@@ -13,11 +13,17 @@
 }
 
 .trackItems {
-    height: 20%;
-    display: flex; /* flex in Tailwind */
-    background-color: #1E40AF; /* bg-blue-900 in Tailwind */
-    margin: 1rem auto 1rem auto; /* my-4 in Tailwind */
-    border-radius: 0.5rem; /* rounded-lg in Tailwind */
-    width: auto;
-    text-align: center; /* text-center in Tailwind */
+    display: flex;
+    position: relative;
+    background-color: #1E40AF;
+    margin: 0 auto 1rem auto; /* Adjust margins as needed */
+    border-radius: 0.5rem;
+    text-align: center;
+    flex: 1; /* Allow the element to grow and shrink */
+}
+
+.trackContainer {
+    display: flex;
+    height: 20vh;
+    margin: 1rem auto;
 }
