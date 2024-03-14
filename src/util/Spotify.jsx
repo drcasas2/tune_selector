@@ -1,6 +1,6 @@
 const clientId = '798f17e4aa1645dcb62264192036844e';
-const redirectUri = 'http://localhost:5173/';// <-- This is for running the app locally on my computer.
-//const redirectUri = 'https://drcasas2.github.io/tune_selector/'; // <-- This is for running the app from GitHub Pages.
+// const redirectUri = 'http://localhost:5173/';// <-- This is for running the app locally on my computer.
+const redirectUri = 'https://drcasas2.github.io/tune_selector/'; // <-- This is for running the app from GitHub Pages.
 // var client_secret = '770df3465ffc4b67bfe5556075f00bfd';
 let accessToken;
 let userId;
