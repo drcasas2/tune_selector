@@ -11,9 +11,8 @@ function Track(props) {
                 <button className={styles.button} onClick={trackAction}>
                     <div className={styles.imageContainer}>
                         <img className= {styles.imageStyle} src={props.track.image} alt={props.track.artist} />
-                        {props.trackBtnAction}
                     </div>
-                
+                    {props.trackBtnAction}
                 </button>
                 <div className = {styles.trackInfo}>
                     <h3>{props.track.name}</h3>

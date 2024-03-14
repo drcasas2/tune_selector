@@ -8,18 +8,18 @@
 }
 
 .imageContainer {
+    display: flex;
     justify-content: center;
-    text-align: center;
-    height: 12vh;
+    height: 10vh;
     width: 20vh;
-    padding: 0 15% 5% 0;
+    padding: auto;
     margin: auto;
 }
 
 .button {
-    width: 18vh;
-    height: 15vh;
-    padding: 2% 0 8% 0;
+    width: auto;
+    height: auto;
+    padding: 2% 0 2% 0;
 }
 
 .trackContainer {
@@ -31,7 +31,7 @@
     margin: 1rem auto 1rem auto; /* Adjust margins as needed */
     border-radius: 0.5rem;
     text-align: center;
-    flex: 1; /* Allow the element to grow and shrink */
+    flex: 1; /*Allow the element to grow and shrink */
     align-items: stretch;
     justify-content: center;
 }

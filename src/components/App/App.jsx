@@ -175,10 +175,12 @@ function App() {
         return (
             <main className={styles.appContainer}>
                 <header className={styles.appHeader}>
-                    {/* <img className={styles.tuneSelectorLogo} src={tuneSelectorLogo} alt='Tune Selector Logo'/>
-                    <img className={styles.tuneSelectorTitleHorizontal} src={tuneSelectorTitleHorizontal} alt='Tune Selector Title'/>
-                    <img className={styles.tuneSelectorTitleVertical} src={tuneSelectorTitleVertical} alt='Tune Selector Title'/> */}
+                        {/* <img className={styles.tuneSelectorTitleHorizontal} src={tuneSelectorTitleHorizontal} alt='Tune Selector Title'/>
+                        <img className={styles.tuneSelectorTitleVertical} src={tuneSelectorTitleVertical} alt='Tune Selector Title'/> */}
                 </header>
+                <div className={styles.tuneSelectorLogo}>
+                        <img src={tune_selector_logo} alt='Tune Selector Logo'/>
+                </div>
                 <section className={styles.searchBarContainer}>
                     <h1 className="text-4xl text-orange-300 text-center font bold shadow-sm">Hey {userName}</h1>
                     <p className="text-1xl text-orange-100 text-center font bold py-1 shadow-sm">Ready to make your playlist?</p>

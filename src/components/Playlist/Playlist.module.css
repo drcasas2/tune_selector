@@ -1,17 +1,24 @@
 .playlistWrapper {
+    margin: 3rem auto 3rem auto;
     display: flex;
     flex-direction: column;
     height: auto;
     width: 100%;
+    border: black solid 1px;
+    padding: 1rem 0 1rem 0;
+    background-color: rgba(0, 0, 0, 0.24);
+    border-radius: 40px;
+    box-shadow: 0px 0px 8px black;
 }
 
 .playlistDetails {
-    background-color: rgba(0, 0, 0, 0.489);
+    background-color: rgba(0, 0, 0, 0);
     border-radius: 40px;
+    border: rgba(0, 0, 0, 0) solid 1px;
 }
 
 .playlistName {
-    height: 2rem;
+    height: 2.2rem;
     font-size: 1.8rem;
     text-align: center;
     margin: 3% auto 1% auto;
@@ -38,20 +45,81 @@
 }
 
 .saveButton {
-    height: 0.5rem;
+    height: auto;
     text-align: center;
-    margin: 0 0 3% 2%;
+    margin: 8% 30% 3% 30%;
     background-color: rgb(24, 24, 24);
-    width: 40%;
+    width: auto;
     border-radius: 10px;
     padding: 5% 5%;
     box-shadow: 0px 0px 1px black;
     display: flex;
     align-items: center;
+    justify-content: center;
+}
+
+.saveButton:active {
+    height: auto;
+    text-align: center;
+    margin: 9% 30% 3% 31%;
+    background-color: rgb(24, 24, 24);
+    width: auto;
+    border-radius: 10px;
+    padding: 5% 5%;
+    box-shadow: 0px 0px 1px black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 input {
     border: none;
+}
+
+.trackContainer {
+    display: flex;
+    height: 15vh;
+    width: 100%;
+    position:relative;
+    background-color: #1a399e;
+    margin: 1rem auto 1rem auto; /* Adjust margins as needed */
+    border-radius: 0.5rem;
+    text-align: center;
+    flex: 1; /* Allow the element to grow and shrink */
+    align-items: stretch;
+    justify-content: center;
+}
+
+.button {
+    width: 50vh;
+    height: auto;
+    padding: 2% 0 2% 0;
+}
+
+.imageContainer {
+    justify-content: center;
+    text-align: center;
+    height: 10vh;
+    width: 20vh;
+    padding: 0% 0% 2% 0;
+    margin: auto;
+}
+
+.imageStyle {
+    /* padding: 1vh 0 1vh 0; */
+    height: 100%;
+    width: auto;
+    object-fit: cover;
+    margin: 0 auto;
+    border-radius: 20%;
+}
+
+.trackInfo {
+    width: 100%;
+    align-items: stretch;
+    margin: auto;
+    display: block;
+    padding: 1vh;
 }
 
 /* #172554 */

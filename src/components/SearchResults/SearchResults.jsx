@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 // import SearchBar from '../SearchBar/SearchBar';
 import Tracklist from '../Tracklist/Tracklist';
+import styles from './SearchResults.module.css';
 
 function SearchResults(props) {
     // const songs = [
@@ -25,6 +26,7 @@ function SearchResults(props) {
         return (
             <div>
                 <Tracklist 
+                    className={styles.trackWrapper}
                     trackBtnAction='Add to playlist'
                     tracks={props.searchResults}
                     onClick={props.onAdd}

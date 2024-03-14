@@ -20,10 +20,18 @@ function Playlist(props) {
                     </div>
                     <div>
                         {props.playlistTracks.map(track => (
-                            <p className='m-1 flex bg-blue-900 my-4 rounded-lg' key={track.id}>
-                                <button onClick={() => props.onRemove(track)}><img src={track.image} alt={track.artist} width='auto' height='auto'/> {props.trackBtnAction}Remove from playlist</button>
+                            <p className={styles.trackContainer} key={track.id}>
+                                <button className={styles.button} onClick={() => props.onRemove(track)}>
+                                    <div className={styles.imageContainer}>
+                                        <img
+                                        className ={styles.imageStyle}
+                                        src={track.image}
+                                        alt={track.artist} />
+                                    </ div>    
+                                        {props.trackBtnAction}Remove from playlist
+                                </button>
 
-                                <div className = 'block ml-3 my-auto'>
+                                <div className = {styles.trackInfo}>
                                     <h3>{track.name}</h3>
                                     <p>{track.artist} | {track.album}</p>
                                 </ div>
