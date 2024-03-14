@@ -12,20 +12,25 @@
     justify-content: center;
     height: 10vh;
     width: 20vh;
-    padding: auto;
+    padding: 0;
     margin: auto;
 }
 
 .button {
-    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 50%;
     height: auto;
-    padding: 2% 0 2% 0;
+    padding: 5% 0 5% 0;
+    font-size: 2vh;
 }
 
 .trackContainer {
     display: flex;
-    height: 15vh;
-    width: 100%;
+    height: 20vh;
+    width: 80vw;
     position:relative;
     background-color: #1E40AF;
     margin: 1rem auto 1rem auto; /* Adjust margins as needed */
@@ -42,4 +47,5 @@
     margin: auto;
     display: block;
     padding: 1vh;
+    font-size: 2vh;
 }

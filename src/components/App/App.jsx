@@ -98,51 +98,29 @@ function App() {
 
     if (!logged) {
         return (
-            /*
-  This example requires some changes to your config:
-  
-  ```
-  // tailwind.config.js
-  module.exports = {
-    // ...
-    plugins: [
-      // ...
-      require('@tailwindcss/forms'),
-    ],
-  }
-  ```
-*/      <>
-        {/*
-          This example requires updating your template:
-  
-          ```
-          <html class="h-full bg-white">
-          <body class="h-full">
-          ```
-        */}
-            <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8 bg-blue-950">
-            <div className="sm:mx-auto sm:w-full sm:max-w-sm">
-                <img
-                className="mx-auto h-40 w-auto"
-                src={tune_selector_logo}
-                alt="Tune Selector Logo"
-                />
-                <h2 className="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-cyan-500">
-                Log in to your Spotify Account
-                </h2>
-            </div>
-    
-                <div className="justify-center mx-auto">
+        <>
+            <div className = {styles.loginPageWrapper}>
+                <div className={styles.loginImageWrapper}>
+                    <img
+                    className={styles.loginImage}
+                    src={tune_selector_logo}
+                    alt="Tune Selector Logo"
+                    />
+                </div>
+                    <h2 className={styles.loginHeader}>
+                    Log in to your Spotify Account
+                    </h2>
+                <div className={styles.loginButtonWrapper}>
                     <button
                         onClick={loginHandler}
                         type="submit"
-                        className="flex w-60 mx-auto my-6 justify-center rounded-md bg-blue-800 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-blue-600 hover:shadow-blue-100/30 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-400"
+                        className="flex w-full mx-auto my-1.5 justify-center rounded-md bg-blue-800 px-3 py-1.5 text-xs md:text-sm font-semibold text-white shadow-sm hover:bg-blue-600 hover:shadow-blue-100/30 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offs et-2 focus-visible:outline-orange-400 active:ml-0.5 active:mr-0.5 active:my-1.5 active:py-1.5 active:px-3"
                     >
                         Log in
                     </button>
                 </div>
     
-                <p className="mt-1 text-center text-sm text-gray-500">
+                <p className="mt-1 my-1 py-1 text-center text-sm text-gray-500">
                 Thanks for trying the app! {' '}
                 <p>Made by David Casas</p>
                 <a href="https://drcasas2.github.io" target="_blank" rel="noopener noreferrer" className="drop-shadow-sm font-semibold leading-6 text-slate-500 hover:text-white  hover:brightness-{200} hover:drop-shadow-xl">
@@ -152,25 +130,6 @@ function App() {
             </div>
         </>
         );
-    // }   else { return(
-    //         <main className={styles.appContainer}>
-    //             <section className={styles.loginHeader}>
-    //                 {/* <img className={styles.tuneSelectorLogo} src={tuneSelectorLogo} alt='Tune Selector Logo' />
-    //                 <img className={styles.tuneSelectorTitleHorizontal} src={tuneSelectorTitleHorizontal} alt='' /> */}
-    //                 <p className={styles.loginP}>Playlist Maker</p>
-    //                 <button className={styles.loginButton} onClick={loginHandler}>Log in with Spotify</button>
-    //                 <footer className={styles.loginfooter}>
-    //                     <p className={styles.loginfooter}>Thanks for trying the app! | Made by David Casas @hi_im_dav1d</p>
-    //                     <ul>
-    //                         <li><a href='mailto:'><img></img></a></li>
-    //                         <li><a href='linkedin'><img></img></a></li>
-    //                         <li><a href='github'><img></img></a></li>
-    //                         <li><a href='twitter'><img></img></a></li>
-    //                     </ul>
-    //                 </footer>
-    //             </section>
-    //         </main>
-    //     );
     }
         return (
             <main className={styles.appContainer}>
@@ -178,12 +137,12 @@ function App() {
                         {/* <img className={styles.tuneSelectorTitleHorizontal} src={tuneSelectorTitleHorizontal} alt='Tune Selector Title'/>
                         <img className={styles.tuneSelectorTitleVertical} src={tuneSelectorTitleVertical} alt='Tune Selector Title'/> */}
                 </header>
-                <div className={styles.tuneSelectorLogo}>
-                        <img src={tune_selector_logo} alt='Tune Selector Logo'/>
+                <div className={styles.appLogoWrapper}>
+                        <img src={tune_selector_logo} alt='Tune Selector Logo' className={styles.appLogo}/>
                 </div>
                 <section className={styles.searchBarContainer}>
-                    <h1 className="text-4xl text-orange-300 text-center font bold shadow-sm">Hey {userName}</h1>
-                    <p className="text-1xl text-orange-100 text-center font bold py-1 shadow-sm">Ready to make your playlist?</p>
+                    <p className=" text-orange-300 text-center font bold shadow-sm md:text-4xl xs:text-sm">Hey {userName}</p>
+                    <p className="text-1xl text-orange-100 text-center font bold pt0.5 shadow-sm xs:text-xs">Ready to make your playlist?</p>
                     <SearchBar className="py-1" onSearch={search} />
                     <SearchResults searchResults={searchResults} onAdd={addTrack} />
                 </section>
